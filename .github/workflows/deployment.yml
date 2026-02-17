@@ -13,11 +13,11 @@ jobs:
             - name: Install required dependencies
               run: npm install
             - name: Linting the Project
-              run: npm lint
+              run: eslint --ext .jsx --fix src
             - name: Testing the Project
-              run: npm test
+              run: vitest run
             - name: Building the Project
-              run: npm build
+              run: vite build
 
 
 
