@@ -11,13 +11,13 @@ jobs:
               with:
                 node-version: '18'
             - name: Install required dependencies
-              run: npm install
+              run: npm ci
             - name: Linting the Project
-              run: eslint --ext .jsx --fix src
+              run: npm run lint
             - name: Testing the Project
-              run: vitest run
+              run: npm test
             - name: Building the Project
-              run: vite build
+              run: npm build
 
 
 
