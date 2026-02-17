@@ -1,0 +1,8 @@
+name: Issue Reported
+on: issues
+jobs:
+    Report-issues:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Reported Issue
+              run: echo "${{ github }}"
