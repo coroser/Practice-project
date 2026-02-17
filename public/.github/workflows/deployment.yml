@@ -1,0 +1,23 @@
+name: App Deployment
+on: push
+jobs:
+    Project-Build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Package Intialization from Repo
+              uses: actions/checkout@v3
+            - name: Install Nodejs 18
+              uses: actions/setup-node
+              with:
+                node-version: '18'
+            - name: Install required dependencies
+              run: npm install
+            - name: Linting the Project
+              run: npm lint
+            - name: Testing the Project
+              run: npm test
+            - name: Building the Project
+              run: npm build
+
+
+
